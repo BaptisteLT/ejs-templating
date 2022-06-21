@@ -44,14 +44,14 @@ app.get('/', function(request, response) {
     ]
 
     const data = {articles};
-    response.render('home',data);
+    response.render('pages/home',data);
 });
 
 app.get('/:nom', function(request, response) {
     const data = {
         nom: request.params.nom
     };
-    response.render('home',data);
+    response.render('pages/home',data);
 });
 
 
