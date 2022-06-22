@@ -47,13 +47,31 @@ app.get('/', function(request, response) {
     response.render('pages/test',data);
 });
 
-app.get('/:nom', function(request, response) {
+/*app.get('/:nom', function(request, response) {
     const data = {
         nom: request.params.nom,
         articles:articles
     };
     response.render('pages/home',data);
+});*/
+
+
+app.post('/taches', function(request, response) {
+    if(request.body.tachecreate)
+    {
+        console.log(request.body.tachecreate);
+    }
+    response.render('pages/taches');
 });
+
+app.get('/taches', function(request, response) {
+    const data = {
+
+    };
+    response.render('pages/taches',data);
+});
+
+
 
 app.use(function(request,response){
     response.status(404).send('Page inexistante')
