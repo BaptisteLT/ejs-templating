@@ -1,11 +1,11 @@
 <%- include('../template/header.ejs') %>
 
-    <% console.log(locals.articles) %>
-    
-    <% for(var i=0; i<locals.articles.length; i++) {%>
+    <% console.log(articles.length) %>
+
+    <% for(var i=0; i<articles.length; i++) {%>
         <ul>
-            <li><%= locals.articles[i].titre %></li>
-            <li><%= locals.articles[i].categorie %></li>
+            <li><%= articles[i].titre %></li>
+            <li><%= articles[i].categorie %></li>
         </ul>
      <% } %>
 
@@ -16,5 +16,3 @@
     <% } %>
 
     <%- include('../template/footer.ejs') %>
-</body>
-</html>
